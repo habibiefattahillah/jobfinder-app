@@ -29,7 +29,7 @@ export default function Landing() {
       });
       login(res.data);
       setShowAuthModal(null);
-      window.location.href = "/dashboard/list-job-vacancy";
+      window.location.replace("/dashboard");
     } catch (error) {
       console.error("Login failed:", error);
     }
