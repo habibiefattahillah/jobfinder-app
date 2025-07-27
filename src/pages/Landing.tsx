@@ -19,7 +19,6 @@ export default function Landing() {
   >(null);
 
   const { data: jobs = [], isLoading, isError } = useJobs();
-  const { token } = useAuthStore();
 
   const { login } = useAuth();
 

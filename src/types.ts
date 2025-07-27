@@ -1,4 +1,3 @@
-// final-project/src/types.ts
 export type JobStatus = 0 | 1;
 
 export interface Job {

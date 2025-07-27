@@ -45,7 +45,7 @@ export function DataTable<TData, TValue>({
 
   useEffect(() => {
     debouncedSearch(searchInput);
-    return () => debouncedSearch.cancel(); // clean up
+    return () => debouncedSearch.cancel();
   }, [searchInput]);
 
   const filteredData = useMemo(() => {
@@ -71,7 +71,6 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="space-y-4">
-      {/* Search & Filters */}
       <div className="flex flex-col md:flex-row md:items-end gap-4">
         <Input
           placeholder="Search..."

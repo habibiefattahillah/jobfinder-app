@@ -1,4 +1,3 @@
-// src/pages/dashboard/JobCreatePage.tsx
 import { JobForm } from "@/components/forms/JobForm";
 import { api } from "@/lib/axios";
 import type { Job } from "@/types";

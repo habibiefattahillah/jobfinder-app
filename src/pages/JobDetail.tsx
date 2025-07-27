@@ -7,7 +7,6 @@ export default function JobDetail() {
   const { id } = useParams();
   const [job, setJob] = useState<Job | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchJob = async () => {
@@ -25,8 +24,8 @@ export default function JobDetail() {
   }, [id]);
 
   if (loading) return <div className="p-6 text-center">Loading...</div>;
-  if (error || !job)
-    return <div className="p-6 text-center text-red-600">{error}</div>;
+  if (!job)
+    return <div className="p-6 text-center text-red-600">Job not found</div>;
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -40,7 +39,6 @@ export default function JobDetail() {
         </button>
       </div>
 
-      {/* Job Details */}
       <div className="flex flex-col md:flex-row gap-6">
         <img
           src={job.company_image_url}

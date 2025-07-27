@@ -1,4 +1,3 @@
-// pages/dashboard/EditJob.tsx
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { JobForm } from "@/components/forms/JobForm";

@@ -1,11 +1,9 @@
-// routes/AppRouter.tsx
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import Landing from "../pages/Landing";
 import JobDetail from "../pages/JobDetail";
 import NotFound from "../pages/NotFound";
 
-// Dashboard Pages
 import DashboardLayout from "../layouts/DashboardLayout";
 import DashboardHome from "../pages/dashboard/DashboardHome";
 import ListJobs from "../pages/dashboard/ListJobs";
@@ -21,11 +19,9 @@ const ProtectedRoute = ({ children }: { children: React.ReactElement }) => {
 export default function AppRouter() {
   return (
     <Routes>
-      {/* Public Routes */}
       <Route path="/" element={<Landing />} />
       <Route path="/job-vacancy/:id" element={<JobDetail />} />
 
-      {/* Protected Dashboard */}
       <Route
         path="/dashboard"
         element={
@@ -41,7 +37,6 @@ export default function AppRouter() {
         <Route path="list-job-vacancy/edit/:id" element={<EditJob />} />
       </Route>
 
-      {/* 404 */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

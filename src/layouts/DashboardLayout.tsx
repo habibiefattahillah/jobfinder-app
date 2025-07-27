@@ -17,7 +17,6 @@ export default function DashboardLayout() {
 
   return (
     <div className="flex flex-col h-screen">
-      {/* Header */}
       <header className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
           <button
@@ -39,9 +38,7 @@ export default function DashboardLayout() {
         </div>
       </header>
 
-      {/* Main content */}
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
         <aside
           className={`${
             collapsed ? "hidden md:block" : ""
@@ -63,13 +60,11 @@ export default function DashboardLayout() {
           </nav>
         </aside>
 
-        {/* Page Content */}
         <main className="flex-1 bg-white p-6 overflow-auto">
           <Outlet />
         </main>
       </div>
 
-      {/* Footer */}
       <footer className="bg-gray-100 text-center py-3 text-sm border-t">
         Achmad Habibie Fattahillah - Sanbercode ReactJS Batch 68
       </footer>

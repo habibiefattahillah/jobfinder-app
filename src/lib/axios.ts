@@ -5,7 +5,6 @@ export const api = axios.create({
   baseURL: "https://final-project-api-alpha.vercel.app/api",
 });
 
-// Automatically attach token if available
 api.interceptors.request.use(
   (config) => {
     const token = useAuthStore.getState().token;

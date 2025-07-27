@@ -38,7 +38,7 @@ export default function ProfilePage() {
             variant="destructive"
             onClick={() => {
               logout();
-              navigate("/"); // or redirect to login
+              navigate("/");
             }}
           >
             Log out
